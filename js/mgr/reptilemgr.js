@@ -11,7 +11,7 @@ reptile = function(callback) {
     var options = {
         //url: 'https://www.bilibili.com/v/kichiku/?spm_id_from=333.334.primary_menu.59',
          host:'s.search.bilibili.com',
-         path:'/cate/search?main_ver=v3&search_type=video&view_type=hot_rank&pic_size=160x100&order=click&copy_right=-1&cate_id=22&page=1&pagesize=5&time_from=20180717&time_to=20180724',
+         path:'/cate/search?main_ver=v3&search_type=video&view_type=hot_rank&pic_size=160x100&order=click&copy_right=-1&cate_id=22&page=1&pagesize=20&time_from=20180717&time_to=20180724',
         method:'GET',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -27,7 +27,7 @@ reptile = function(callback) {
            chunks.push(chunk);
             // var $ = cheerio.load(chunk);
             //var a = iconv.decode(Buffer.concat(chunks), 'gb2312');
-            chunk = JSON.parse(chunk);
+            //chunk = JSON.parse(chunk);
             console.log(chunk);
                 //console.log($);
                        //console.log(a);
@@ -42,7 +42,7 @@ reptile = function(callback) {
         
        
         //console.log($);
-        console.log(chunks);
+        //console.log(chunks);
     })
    
     
