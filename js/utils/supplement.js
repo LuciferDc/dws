@@ -44,3 +44,10 @@ Date.prototype.Format = function (fmt) {
             fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
     return fmt;
 } 
+
+Date.prototype.CalDate = function(day) {
+    var d= this; 
+    d.setDate(d.getDate() + day); 
+    var m=d.getMonth() + 1; 
+    return d.getFullYear() +'-' + m + '-' + d.getDate(); 
+}

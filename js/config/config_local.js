@@ -33,3 +33,36 @@ exports.official = function() {
         }
     }
 }
+
+exports.ALLAPI = function() {
+    return {
+        BILIBILIAPI: {
+            CHATHOST:'api.bilibili.com',
+            CHATPATH:'/x/v1/dm/list.so?oid=',
+
+            BASICHOST:'www.bilibili.com',
+
+            GETLISTHOST:'s.search.bilibili.com',
+            GETLISTTPATH:'/cate/search',
+            
+            KICHIKUGUIDECATEID:26,
+            KICHIKUMADCATEID:22,
+            KICHIKUNANUALVOCALOIDCATEID:126,
+
+            MODEL: {
+                main_ver:'v3',
+                search_type:'video',
+                view_type:'hot_rank',
+                pic_size:'160x100',
+                order:'click',
+                copy_right:-1,
+                cate_id:26,
+                page:1,
+                pagesize:20,
+                time_from:'20180720',
+                time_to:'20180727'
+            }
+            
+        }
+    }
+}
