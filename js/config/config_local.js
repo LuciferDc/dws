@@ -22,17 +22,6 @@ exports.game_server = function() {
     }
 }
 
-exports.official = function() {
-    return {
-        OFFICIAL_IP:'localhost',
-        OFFICIAL_PORT:3000,
-        OFFICIAL_PATH :{
-            INFO:'/api/v1/user/info',
-            LEVEL:'/api/v1/panda/level',
-            BUY:'/api/v1/farm/buy'
-        }
-    }
-}
 
 exports.ALLAPI = function() {
     return {
@@ -49,7 +38,7 @@ exports.ALLAPI = function() {
             KICHIKUMADCATEID:22,
             KICHIKUNANUALVOCALOIDCATEID:126,
 
-            MODEL: {
+            SEARCHMODEL: {
                 main_ver:'v3',
                 search_type:'video',
                 view_type:'hot_rank',
@@ -62,7 +51,6 @@ exports.ALLAPI = function() {
                 time_from:'20180720',
                 time_to:'20180727'
             }
-            
         }
     }
 }
