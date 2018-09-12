@@ -21,6 +21,21 @@ String.prototype.format = function (args) {
     return result;
 }
 
+String.prototype.arrformat = function(arr) {
+    var result = this;
+    if(arr.length > 0) {
+        for(var i in arr) {
+            var arrtmp = arr[i];
+            for(var key in arrtmp) {
+                if(arrtmp[key] != undefined) {
+                    var reg = new RegExp("({" + key + i + "})");
+                    result = result.replace(reg, arrtmp[key]);
+                }
+            }
+        }
+    }
+    return result;
+}
 // 对Date的扩展，将 Date 转化为指定格式的String   
 // 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符，   
 // 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字)   
@@ -46,8 +61,8 @@ Date.prototype.Format = function (fmt) {
 } 
 
 Date.prototype.CalDate = function(day) {
-    var d= this; 
+    var d = this; 
     d.setDate(d.getDate() + day); 
     var m=d.getMonth() + 1; 
-    return d.getFullYear() +'-' + m + '-' + d.getDate(); 
+    return d.getFullYear() +'' + (m<10? +'0': +'') + m + '' + d.getDate(); 
 }

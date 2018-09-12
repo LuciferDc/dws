@@ -34,8 +34,9 @@ exports.ALLAPI = function() {
             GETLISTHOST:'s.search.bilibili.com',
             GETLISTTPATH:'/cate/search',
             
-            KICHIKUGUIDECATEID:26,
-            KICHIKUMADCATEID:22,
+            VIDEOPATH:'/video/av',
+            KICHIKUGUIDECATEID:22,
+            KICHIKUMADCATEID:26,
             KICHIKUNANUALVOCALOIDCATEID:126,
 
             SEARCHMODEL: {
@@ -45,7 +46,7 @@ exports.ALLAPI = function() {
                 pic_size:'160x100',
                 order:'click',
                 copy_right:-1,
-                cate_id:26,
+                cate_id:22,
                 page:1,
                 pagesize:20,
                 time_from:'20180720',

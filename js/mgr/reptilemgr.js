@@ -6,8 +6,8 @@ var cheerio = require("cheerio")
 var qs = require('querystring')
 
 var iconv = require("iconv-lite")
-
-reptile = function(HOST, PATH, DATA, callback) {
+exports.reptile = function(HOST, PATH, DATA, callback) {
+    //console.log(DATA.data);
     var content = qs.stringify(DATA.data);
     //var url = 'https://www.bilibili.com/v/kichiku/?spm_id_from=333.334.primary_menu.59';
     var options = {
@@ -20,7 +20,6 @@ reptile = function(HOST, PATH, DATA, callback) {
             'User-Agent':'Mozilla/5.0(Windows;U;WindowsNT6.1;en-us)AppleWebKit/534.50(KHTML,likeGecko)Version/5.1Safari/534.50',
         }
     };
-      
     var req = https.request(options, function(res) {
         var chunks = [];
         var size = 0;
@@ -30,7 +29,7 @@ reptile = function(HOST, PATH, DATA, callback) {
         })
         res.on('end', function() {
             var data = Buffer.concat(chunks, size).toString();
-            var resu = {};
+            var resu = {};             
             resu.type = DATA.type;
             resu.data = data; 
             callback(resu);
@@ -38,7 +37,7 @@ reptile = function(HOST, PATH, DATA, callback) {
         })
         
     })
-    req.on('error', function(err) {
+    req.on('error', function(e) {
         console.log('problem with request: ' + e.message);
 		callback(false,e);
         // console.log(err.message);
