@@ -25,7 +25,6 @@ function getPool(){
     if(pool == null){
         init();
     }
-
     return pool;
 }
 

@@ -7,44 +7,37 @@ var api = configs.ALLAPI();
 
 var reptile = require("../mgr/reptilemgr");
 var datare = require("../mgr/repdatamgr");
+var ShanghaiReptileDb = require('../db/shanghai_teptile_db')
+
+var exec = require('child_process').exec;
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
- // res.send(circular.stringify(global));
- // res.render('index', { title: 'Express'});
+router.get('/', function (req, res, next) {
+  // res.send(circular.stringify(global));
+  // res.render('index', { title: 'Express'});
 });
 
 router.get('/reptile', (req, res, next) => {
-  api = api.BILIBILIAPI;
-  var host = api.GETLISTHOST;
-  var path = api.GETLISTTPATH;
-  var data = api.SEARCHMODEL;
-  // console.log(api);
-  data.time_from = new Date().CalDate(-7);
-  data.time_to = new Date().CalDate(0);
-  var req = {};
-  req.data = data;
-  req.type = 0;
-  
-  reptile.reptile(host, path, req, (re) => {
-    //console.log(re.data);
-    if(!re.type) {
-      datare.savedata(re, (resu) => {
-        for(var i in resu) {
-          console.log(resu[i].id);
-          host = api.BASICHOST;
-          path = api.VIDEOPATH + resu[i].id;
-          req.data = null;
-          req.type = 1;
-          reptile.reptile(host, path, req, (re) => {
-            
-          })
-        }
-        res.send("ok");
-      })
-    }
+  // api = api.BILIBILIAPI;
+  // var host = api.GETLISTHOST;
+  // var path = api.GETLISTTPATH;
+  // var data = api.SEARCHMODEL;
+  // // console.log(api);
+  // data.time_from = new Date().CalDate(-7);
+  // data.time_to = new Date().CalDate(0);
+  // var req = {};
+  // req.data = data;
+  // req.type = 0;
+  ShanghaiReptileDb.getCodeList(res => {
+    // let productId = res[0].code;
+    
+    
+    // for(let i of res) {
+    //   let productId = i.code;
+
+    // }
   })
- // console.log(api);
+
 })
 
 module.exports = router;

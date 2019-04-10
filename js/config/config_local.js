@@ -2,10 +2,10 @@ var LOCAL_IP = 'localhost';
 
 exports.mysql = function() {
     return {
-        HOST: LOCAL_IP,
+        HOST: '47.93.118.148',
         USER: 'root',
-        PWD: 'admin123',
-        DB: 'dws',
+        PWD: '2017@zhidianTech',
+        DB: 'reptile',
         PORT: 3306
     }
 }

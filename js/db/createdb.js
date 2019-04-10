@@ -29,3 +29,34 @@ exports.createTable = function(aid, cid, callback) {
         callback(true);
     })
 }
+
+exports.a = function(callback) {
+    callback = callback == null ? nop:callback;
+    var sql = 'select id from ins_enterprise where id not in (select c_enterprise_id from ins_enterprise_member)';
+    query(sql, function(err, rows, fields) {
+        if(err) {
+          callback(err); return;
+        }
+        callback(rows);
+    })
+}
+
+exports.b = function(data, callback) {
+    var sql = 'insert into ins_enterprise_member (c_enterprise_id, c_deadline) values '
+    var flag = 1;
+    for(var i of data) {
+        if(flag) {
+            sql += '(' + i.id + ', ' + i.d + ')'
+            flag = 0;
+        } else {
+            sql += ', (' + i.id + ', ' + i.d + ')'
+        }
+    }
+    // console.log(sql);
+    query(sql, function(err, rows, fields) {
+        if(err) {
+          callback(err); return;
+        }
+        callback(true);
+    })
+}
