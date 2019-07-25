@@ -85,19 +85,26 @@
           KWKD_CODE_EMOTION_14: 3014, // 我目前的感情出现问题，是否应该分手？<br>
           KWKD_CODE_EMOTION_15: 3015, // 我们什么时候会分手？<br>
           KWKD_CODE_EMOTION_16: 3016, // 我与前任是否应该复合？<br> ] )
-        - **dayun**: 十年大运 ( birthday: *string*, sex: *number* [ 0: 女, 1: 男 ], index: *number* [ 第几个大运 ] )
-        - **mingge**: 命格 ( birthday: *string*, sex: *number* [ 0: 女, 1: 男 ] )
-        - **yyjkzangfu**: 易医健康五脏数据 ( birthday: *string*, sex: *number* [ 0: 女, 1: 男 ], type: *string* [ 火(心火), 土(脾土), 金(肺金), 木(肝木), 水(肾水)] )
-        - **yyjkreport**: 易医健康今日健康数据 ( birthday: *string*, sex: *number* [ 0: 女, 1: 男 ], type: *string* [ 年, 月, 日 ] )
-        - **yyjkzhengti**: 易医健康整体健康数据 ( birthday: *string*, sex: *number* [ 0: 女, 1: 男 ] )
-        - **moshu**: 魔术大师 ( sex: *number* [ 0: 女, 1: 男 ], num1: *number* [ 0-9 ], num2: *number* [ 0-9 ], num3: *number* [ 0-9 ], num4: *number* [ 0-9 ] )
-        - **bzhh**: 旧版合婚 ( femaleBirthday: *string* [ 参数格式 ＝ birthday ], maleBirthday: *string* [ 参数格式 ＝ birthday ] )
-        - **pphp**: 匹配合盘 ( birthday1: *string* [ 参数格式 ＝ birthday ], sex1: *number* [ 0: 女, 1: 男 ], birthday2: *string* [ 参数格式 ＝ birthday ], sex2: *number* [ 0: 女, 1: 男 ], )
-        - **compass**: 风水罗盘 ( birthday: *string*, sex: *number* [ 0: 女, 1: 男 ], time: *number* [ 时间戳 ], type: *number* [ 0: 利于能量, 1: 利于钱财, 2: 利于运程, 3: 利于桃花 ] )
-        - **yaoce**: 遥测 ( type: *number* [ 0: 吉凶, 1: 出行, 2: 钱财, 3: B超, 4: 情感, 5: 会见 ], num0: *number* [ 0-9 ? ], num1: *number* [ 0-9 ? ] )
-        - **yindateDetail**: 阴历转阳历 ( stamp: *number* [ 时间戳 ], sex: *number* [ 0: 女, 1: 男 ] )
-        - **dateDetail**: 阳历转阴历 ( stamp: *number* [ 时间戳 ], sex: *number* [ 0: 女, 1: 男 ] )
-        
-        
+      - **dayun**: 十年大运 ( birthday: *string*, sex: *number* [ 0: 女, 1: 男 ], index: *number* [ 第几个大运 ] )
+      - **mingge**: 命格 ( birthday: *string*, sex: *number* [ 0: 女, 1: 男 ] )
+      - **yyjkzangfu**: 易医健康五脏数据 ( birthday: *string*, sex: *number* [ 0: 女, 1: 男 ], type: *string* [ 火(心火), 土(脾土), 金(肺金), 木(肝木), 水(肾水)] )
+      - **yyjkreport**: 易医健康今日健康数据 ( birthday: *string*, sex: *number* [ 0: 女, 1: 男 ], type: *string* [ 年, 月, 日 ] )
+      - **yyjkzhengti**: 易医健康整体健康数据 ( birthday: *string*, sex: *number* [ 0: 女, 1: 男 ] )
+      - **moshu**: 魔术大师 ( sex: *number* [ 0: 女, 1: 男 ], num1: *number* [ 0-9 ], num2: *number* [ 0-9 ], num3: *number* [ 0-9 ], num4: *number* [ 0-9 ] )
+      - **bzhh**: 旧版合婚 ( femaleBirthday: *string* [ 参数格式 ＝ birthday ], maleBirthday: *string* [ 参数格式 ＝ birthday ] )
+      - **pphp**: 匹配合盘 ( birthday1: *string* [ 参数格式 ＝ birthday ], sex1: *number* [ 0: 女, 1: 男 ], birthday2: *string* [ 参数格式 ＝ birthday ], sex2: *number* [ 0: 女, 1: 男 ] )
+      - **compass**: 风水罗盘 ( birthday: *string*, sex: *number* [ 0: 女, 1: 男 ], time: *number* [ 时间戳 ], type: *number* [ 0: 利于能量, 1: 利于钱财, 2: 利于运程, 3: 利于桃花 ] )
+      - **yaoce**: 遥测 ( type: *number* [ 0: 吉凶, 1: 出行, 2: 钱财, 3: B超, 4: 情感, 5: 会见 ], num0: *number* [ 0-9 ? ], num1: *number* [ 0-9 ? ] )
+      - **yindateDetail**: 阴历转阳历 ( stamp: *number* [ 时间戳 ], sex: *number* [ 0: 女, 1: 男 ] )
+      - **dateDetail**: 阳历转阴历 ( stamp: *number* [ 时间戳 ], sex: *number* [ 0: 女, 1: 男 ] )<br><br>
+    - *dispose.redirect.js*:
+      - **hehun**: 新版合婚-组织数据 ( femaleBirthday: *string* [ 参数格式 ＝ birthday ], maleBirthday: *string* [ 参数格式 ＝ birthday ] )
+      - **currscores**: 当日能量-组织数据 ( birthday: *string*, sex: *number* [ 0: 女, 1: 男 ], date: *number* [ 时间戳 ], riyuanScore: *number*, itemScoreList: *Array* [0, 88, 86, 82, 88] )
+      - **pphp**: 匹配合盘-组织数据 ( birthday1: *string* [ 参数格式 ＝ birthday ], sex1: *number* [ 0: 女, 1: 男 ], birthday2: *string* [ 参数格式 ＝ birthday ], sex2: *number* [ 0: 女, 1: 男 ], name1: *string* [ 替换 xx 的名字 ], name2: *string* [ 替换 mm 的名字 ] )
+      - **color**: 颜色数字-组织数据 ( birthday: *string*, sex: *number* [ 0: 女, 1: 男 ], date: *number* [ 时间戳 ] )
+      - **xuanshi**: 新版 选时-组织数据 ( birthday: *string*, sex: *number* [ 0: 女, 1: 男 ], date: *number* [ 时间戳 ], type: *number* [ 0: 做事，1: 搬家，2: 求财，3: 开业，4: 约会，5: 会友，6: 出行，7: 面试 ] ) <br><br>
+    - *coupling.redirect.js*
+      - **getMonthsSimple**: 首页7天 ( birthday: *string*, sex: *number* [ 0: 女, 1: 男 ], time: *number* [ 时间戳 ] )
+      - **getDayun**:  获取选定日期的状态 - 大运 (birthday: *string*, sex: *number* [ 0: 女, 1: 男 ], time: *number* [ 时间戳 ], index: *number* [ 第几个大运 ], type: *number* [ 0: 运程, 1: 财富, 2: 情感])
 ---
 ## 样例请见*exm.js* ##      
