@@ -106,5 +106,20 @@
     - *coupling.redirect.js*
       - **getMonthsSimple**: 首页7天 ( birthday: *string*, sex: *number* [ 0: 女, 1: 男 ], time: *number* [ 时间戳 ] )
       - **getDayun**:  获取选定日期的状态 - 大运 (birthday: *string*, sex: *number* [ 0: 女, 1: 男 ], time: *number* [ 时间戳 ], index: *number* [ 第几个大运 ], type: *number* [ 0: 运程, 1: 财富, 2: 情感])
+- **utils:**
+   - *date-to-redirect-utils.js:*
+      - **dateStringToStamp**: YYYY-MM-DD HH:mm 格式的时间转换成时间戳 ( dateString: *string* )
+      - **dateDatabaseToStamp**: 数据库存储的日期格式 转换成时间戳 ( dateDatabase: *string* [ '197012150500' ] )
+      - **dateObjectToStamp**: 将年月日时分秒对象转换成时间戳 ( dateObject: *Object* { year: 2019, month: 03, day: 01, hour: 01, min: 30, seconds: 00 } )
+    - *coupling-utils.js:*
+      - **getBaseScroe**: 获得基础分 ( scoreAll: *number* )
+      - **getErigrhDec**: 获得运程描述 ? ( detail: *Object* )
+      - **getListDoing**: 获取描述 ? ( timeMArr: *Array* )
+      - **doMonth**: 将描述改成本月 ( str: *string* )
+      - **getBaseMonths**: 获取每个月的天数 ( chexkYear: *number* [ 年份 ] )
+      - **getListScroe**: 获取??描述? ( timeMArr: *Array* )
+      - **doYear**: 将描述改成本年 ( str: *string* )
+      - **doDay**: 将描述改成本日 ( str: *string* )
+      - **birthdayDo**: 默认知道时辰和阳历 将 YYYY-MM-DD 的日期格式转换成 wanli 算法识别的 birthday 的格式 ( bir: *string* [ YYYY-MM-DD ] )
 ---
 ## 样例请见*exm.js* ##      
